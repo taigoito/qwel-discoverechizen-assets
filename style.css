@@ -4,18 +4,3 @@
  * Location: Fukui, Japan
  * @package Qwel-Assets
  */
-/**
- * Blockquote
- */
-.wp-block-quote.is-style-qwel-custom {
-  margin: 0 0 1.75em;
-  padding-left: 1em;
-  border-left: 0.5em solid var(--wp--preset--color--light);
-}
-
-.wp-block-quote.is-style-qwel-custom p, .wp-block-quote.is-style-qwel-custom cite {
-  font-style: italic;
-  font-size: var(--wp--custom--font-size--small);
-  line-height: var(--wp--custom--line-height--large);
-  letter-spacing: 0.04rem;
-}
