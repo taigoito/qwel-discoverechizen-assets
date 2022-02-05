@@ -1,0 +1,7 @@
+/**
+ * Blockquote
+ */
+
+.wp-block-quote.is-style-qwel-custom {
+  @include blockquote();
+}
