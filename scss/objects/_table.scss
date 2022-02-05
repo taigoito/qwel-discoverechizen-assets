@@ -1,0 +1,7 @@
+/**
+ * Table
+ */
+
+.wp-block-table.is-style-qwel-custom {
+  @include table();
+}
