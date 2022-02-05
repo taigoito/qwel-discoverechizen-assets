@@ -19,31 +19,3 @@
   line-height: var(--wp--custom--line-height--large);
   letter-spacing: 0.04rem;
 }
-
-/**
- * Table
- */
-.wp-block-table.is-style-qwel-custom {
-  width: 100%;
-}
-
-.wp-block-table.is-style-qwel-custom thead {
-  border: 0;
-}
-
-.wp-block-table.is-style-qwel-custom tr {
-  border-bottom: 1px solid var(--wp--preset--color--medium-light);
-}
-
-.wp-block-table.is-style-qwel-custom tr:first-child {
-  border-top: 1px solid var(--wp--preset--color--medium-light);
-}
-
-.wp-block-table.is-style-qwel-custom th, .wp-block-table.is-style-qwel-custom td {
-  padding-top: .625rem;
-  padding-bottom: .625rem;
-  border: 0;
-  font-size: var(--wp--custom--font-size--small);
-  line-height: var(--wp--custom--line-height--large);
-  letter-spacing: 0.04rem;
-}

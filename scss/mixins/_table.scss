@@ -3,10 +3,6 @@
 @mixin table() {
   width: 100%;
 
-  thead {
-    border: 0; // Reset
-  }
-
   tr {
     border-bottom: 1px solid var(--wp--preset--color--medium-light);
 
@@ -18,7 +14,6 @@
   th, td {
     padding-top: .625rem;
     padding-bottom: .625rem;
-    border: 0; // Reset
     @include smallText();
   }
 }
