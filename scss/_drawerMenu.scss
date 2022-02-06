@@ -2,8 +2,9 @@
  * Drawer Menu
  */
 
-$headerHeight:     4.5rem !default;
-$siteBrandHeight:  3rem !default;
+$breakpoint:       900px !default;
+$headerPad:        0.75rem !default;
+$siteBrandHeight:  48px !default;
 
 .drawer {
   position: fixed;
@@ -11,19 +12,23 @@ $siteBrandHeight:  3rem !default;
   right: 0;
   z-index: 1110;
   display: block;
-  width: $headerHeight;
-  height: $headerHeight;
-  padding: .75rem;
+  width: calc(#{$headerPad * 2} + #{$siteBrandHeight});
+  height: calc(#{$headerPad * 2} + #{$siteBrandHeight});
+  padding: 0; // Reset
   border: 0;
   background-color: transparent;
   text-align: center;
   outline: 0;
   cursor: pointer;
 
+  @media (min-width: $breakpoint) {
+    display: none;
+  }
+
   &__navicon.icon, &__close.icon {
     position: absolute;
-    top: .75rem;
-    right: .75rem;
+    top: $headerPad;
+    right: $headerPad;
     width: $siteBrandHeight;
     height: $siteBrandHeight;
     transition: .25s all ease-in-out;
@@ -56,8 +61,8 @@ $siteBrandHeight:  3rem !default;
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 1100; // 適宜に変更
-  width: 18rem; // 適宜に変更
+  z-index: 1100;
+  width: clamp(18rem, 40%, 24rem);
   height: 100%;
   margin: auto;
   background-color: rgba(#333333, .85);
