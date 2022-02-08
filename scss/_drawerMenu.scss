@@ -45,13 +45,18 @@ $siteBrandHeight:  48px !default;
   }
 
   &__close {
-    color: var(--wp--preset--color--white);
     opacity: 1;
     transform: rotate(0);
 
     @at-root .drawer:not(.--active) .drawer__close {
       opacity: 0;
       transform: rotate(45deg);
+    }
+  }
+
+  &.--dark {
+    .drawer__close {
+      color: var(--wp--preset--color--white);
     }
   }
 }
@@ -65,7 +70,7 @@ $siteBrandHeight:  48px !default;
   width: clamp(18rem, 40%, 24rem);
   height: 100%;
   margin: auto;
-  background-color: rgba(#333333, .85);
+  background-color: rgba(#eeeeee, .85);
   text-align: center;
   transition: width ease-in-out .25s;
   
@@ -127,13 +132,25 @@ $siteBrandHeight:  48px !default;
       width: 3rem;
       padding-top: 1rem;
       padding-bottom: 1rem;
-      fill: var(--wp--preset--color--white);
     }
 
     a {
       display: block;
-      color: var(--wp--preset--color--white);
       text-decoration: none;
+    }
+  }
+
+  &.--dark {
+    background-color: rgba(#333333, .85);
+
+    .drawerMenu__item {
+      &.--social {
+        fill: var(--wp--preset--color--white);
+      }
+
+      a {
+        color: var(--wp--preset--color--white);
+      }
     }
   }
 }

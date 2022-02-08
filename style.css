@@ -46,7 +46,6 @@
 }
 
 .drawer__close {
-  color: var(--wp--preset--color--white);
   opacity: 1;
   -webkit-transform: rotate(0);
           transform: rotate(0);
@@ -58,6 +57,10 @@
           transform: rotate(45deg);
 }
 
+.drawer.--dark .drawer__close {
+  color: var(--wp--preset--color--white);
+}
+
 .drawerMenu {
   position: fixed;
   top: 0;
@@ -67,7 +70,7 @@
   width: clamp(18rem, 40%, 24rem);
   height: 100%;
   margin: auto;
-  background-color: rgba(51, 51, 51, 0.85);
+  background-color: rgba(238, 238, 238, 0.85);
   text-align: center;
   -webkit-transition: width ease-in-out .25s;
   transition: width ease-in-out .25s;
@@ -142,13 +145,23 @@
   width: 3rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  fill: var(--wp--preset--color--white);
 }
 
 .drawerMenu__item a {
   display: block;
-  color: var(--wp--preset--color--white);
   text-decoration: none;
+}
+
+.drawerMenu.--dark {
+  background-color: rgba(51, 51, 51, 0.85);
+}
+
+.drawerMenu.--dark .drawerMenu__item.--social {
+  fill: var(--wp--preset--color--white);
+}
+
+.drawerMenu.--dark .drawerMenu__item a {
+  color: var(--wp--preset--color--white);
 }
 
 .drawerMenuOverlay {

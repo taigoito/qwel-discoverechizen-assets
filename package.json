@@ -1,5 +1,5 @@
 {
-  "name": "qwel-two",
+  "name": "qwel-assets",
   "version": "1.0.0",
   "description": "",
   "main": "init.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/taigoito/qwel-two.git"
+    "url": "git+https://github.com/taigoito/qwel-assets.git"
   },
   "author": "Taigo Ito",
   "license": "GPL",
   "bugs": {
-    "url": "https://github.com/taigoito/qwel-two/issues"
+    "url": "https://github.com/taigoito/qwel-assets/issues"
   },
-  "homepage": "https://github.com/taigoito/qwel-two#readme"
+  "homepage": "https://github.com/taigoito/qwel-assets#readme"
 }

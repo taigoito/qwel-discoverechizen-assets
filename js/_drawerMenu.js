@@ -8,6 +8,9 @@
 export default class DrawerMenu {
   
   constructor(options = {}) {
+    // 設定
+    this.darkMode = options.darkMode || false;
+
     // クローンする対象
     this._siteBrand = options.siteBrand || 
       document.querySelector('.gNav__siteBrand');
@@ -20,6 +23,7 @@ export default class DrawerMenu {
     // .drawer
     this._drawer = document.createElement('button');
     this._drawer.classList.add('drawer');
+    if (this.darkMode) this._drawer.classList.add('--dark');
 
     // .drawer__navicon
     this._navicon = document.createElement('span');
@@ -38,6 +42,7 @@ export default class DrawerMenu {
     // .drawerMenu
     this._drawerMenu = document.createElement('div');
     this._drawerMenu.classList.add('drawerMenu');
+    if (this.darkMode) this._drawerMenu.classList.add('--dark');
 
     // .drawerMenu__inner
     this._menu = document.createElement('div');
