@@ -13,11 +13,11 @@ export default class DrawerMenu {
 
     // クローンする対象
     this._siteBrand = options.siteBrand || 
-      document.querySelector('.gNav__siteBrand');
+      document.querySelector('.siteBrand');
     this._primaryMenu = options.primaryMenu || 
-      document.querySelector('.gNav__primaryMenu');
+      document.querySelector('.primaryMenu');
     this._socialMenu = options.socialMenu || 
-      document.querySelector('.gNav__socialMenu');
+      document.querySelector('.socialMenu');
 
     // 各要素生成
     // .drawer
@@ -112,10 +112,15 @@ export default class DrawerMenu {
 
   _importMenu() {
     // メニューアイテムをインポート
-    this._importSiteBrand(); // .drawerMenu__siteBrand
-    this._importPrimaryMenu(); // .drawerMenu__primaryMenu
-    this._importSocialMenu(); // .drawerMenu__socialMenu
-
+    if (this._siteBrand) {
+      this._importSiteBrand(); // .drawerMenu__siteBrand
+    }
+    if (this._primaryMenu) {
+      this._importPrimaryMenu(); // .drawerMenu__primaryMenu
+    }
+    if (this._socialMenu) {
+      this._importSocialMenu(); // .drawerMenu__socialMenu
+    }
   }
 
 
