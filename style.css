@@ -150,7 +150,7 @@
 }
 
 /**
- * Component - Icon
+ * Icon
  */
 .icon {
   position: relative;
@@ -179,4 +179,17 @@
 .icon--l {
   width: 4.5rem;
   height: 4.5rem;
+}
+
+/**
+ * Responsive Color
+ */
+.responsiveColor.--change {
+  color: var(--wp--preset--color--white);
+}
+.responsiveColor.--change span, .responsiveColor.--change a {
+  color: var(--wp--preset--color--white);
+}
+.responsiveColor.--change img {
+  filter: invert(1) grayscale(1) brightness(4);
 }

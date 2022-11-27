@@ -13,6 +13,10 @@ new DrawerMenu();
 import Scrolling from './_scrolling.js';
 new Scrolling();
 
+// Responsive Color
+import ResponsiveColor from './_responsiveColor.js';
+new ResponsiveColor();
+
 // Evil Icons
 import EvilIcons from './_evilIcons.js';
 new EvilIcons();

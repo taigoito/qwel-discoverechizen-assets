@@ -27,7 +27,7 @@ export default class DrawerMenu {
 
     // .drawer__navicon
     this._navicon = document.createElement('span');
-    this._navicon.classList.add('drawer__navicon');
+    this._navicon.classList.add('drawer__navicon', 'responsiveColor');
     this._navicon.dataset.icon = 'ei-navicon';
     this._navicon.dataset.size = 'm';
     this._drawer.appendChild(this._navicon);

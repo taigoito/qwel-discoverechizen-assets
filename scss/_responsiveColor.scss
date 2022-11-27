@@ -1,0 +1,17 @@
+/**
+ * Responsive Color
+ */
+
+.responsiveColor {
+  &.--change {
+    color: var(--wp--preset--color--white);
+
+    span, a {
+      color: var(--wp--preset--color--white);
+    }
+
+    img {
+      filter: invert(1) grayscale(1) brightness(4);
+    }
+  }
+}
