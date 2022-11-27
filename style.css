@@ -16,45 +16,35 @@
   outline: 0;
   cursor: pointer;
 }
-
 @media (min-width: 900px) {
   .drawer {
     display: none;
   }
 }
-
 .drawer__navicon.icon, .drawer__close.icon {
   position: absolute;
   top: 0.75rem;
   right: 0.75rem;
   width: 48px;
   height: 48px;
-  -webkit-transition: .25s all ease-in-out;
-  transition: .25s all ease-in-out;
+  transition: 0.25s all ease-in-out;
 }
-
 .drawer__navicon {
   opacity: 0;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
-
 .drawer:not(.--active) .drawer__navicon {
   opacity: 1;
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
+  transform: rotate(0);
 }
 
 .drawer__close {
   opacity: 1;
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
+  transform: rotate(0);
 }
-
 .drawer:not(.--active) .drawer__close {
   opacity: 0;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .drawer.--dark .drawer__close {
@@ -72,101 +62,76 @@
   margin: auto;
   background-color: rgba(238, 238, 238, 0.85);
   text-align: center;
-  -webkit-transition: width ease-in-out .25s;
-  transition: width ease-in-out .25s;
+  transition: width ease-in-out 0.25s;
 }
-
 .drawerMenu:not(.--show) {
   width: 0;
 }
-
 .drawerMenu__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  flex-wrap: wrap;
+  align-content: center;
   height: 100%;
   margin-bottom: 0;
   padding-left: 20%;
   text-align: left;
   opacity: 1;
 }
-
 .drawerMenu__inner:not(.--show) {
   opacity: 0;
 }
-
 .drawerMenu__inner.--collapse {
   display: none;
 }
-
 .drawerMenu__siteBrand, .drawerMenu__primaryMenu, .drawerMenu__socialMenu {
   list-style: none;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
+  flex: 1 1 100%;
   padding-left: 0;
 }
-
 .drawerMenu__socialMenu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-start;
+  align-items: center;
 }
-
 .drawerMenu__item {
   width: 100%;
   margin-bottom: 0;
-  padding-top: .375rem;
-  padding-bottom: .375rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
   text-transform: capitalize;
 }
-
 .drawerMenu__item.--brand {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-
 .drawerMenu__item.--brand img {
   width: auto;
   height: 48px;
 }
-
 .drawerMenu__item.--social {
   width: 3rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-
 .drawerMenu__item.--social img {
   width: 100%;
   height: auto;
 }
-
 .drawerMenu__item a {
   display: block;
   text-decoration: none;
 }
-
 .drawerMenu.--dark {
-  background-color: rgba(51, 51, 51, 0.85);
+  background-color: var(--wp--preset--color--primary-dark);
 }
-
 .drawerMenu.--dark .drawerMenu__item.--social {
   fill: var(--wp--preset--color--white);
 }
-
 .drawerMenu.--dark .drawerMenu__item a {
   color: var(--wp--preset--color--white);
+}
+.drawerMenu.--dark .drawerMenu__item a img {
+  filter: invert(1) grayscale(1) brightness(4);
 }
 
 .drawerMenuOverlay {
@@ -180,7 +145,6 @@
   height: 100%;
   background-color: transparent;
 }
-
 .drawerMenuOverlay.--collapse {
   display: none;
 }
@@ -203,8 +167,7 @@
   background: inherit;
   fill: inherit;
   pointer-events: none;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
   -ms-transform: translate(0.5px, -0.3px);
 }
 

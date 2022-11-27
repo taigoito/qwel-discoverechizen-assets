@@ -9,15 +9,15 @@ export default class DrawerMenu {
   
   constructor(options = {}) {
     // 設定
-    this.darkMode = options.darkMode || false;
+    this.darkMode = options.darkMode || true;
 
     // クローンする対象
     this._siteBrand = options.siteBrand || 
-      document.querySelector('.siteBrand');
+      document.querySelector('.gNav__siteBrand');
     this._primaryMenu = options.primaryMenu || 
-      document.querySelector('.primaryMenu');
+      document.querySelector('.gNav__primaryMenu');
     this._socialMenu = options.socialMenu || 
-      document.querySelector('.socialMenu');
+      document.querySelector('.gNav__socialMenu');
 
     // 各要素生成
     // .drawer

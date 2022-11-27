@@ -146,7 +146,7 @@ $siteBrandHeight:  48px !default;
   }
 
   &.--dark {
-    background-color: rgba(#333333, .85);
+    background-color: var(--wp--preset--color--primary-dark);
 
     .drawerMenu__item {
       &.--social {
@@ -155,6 +155,10 @@ $siteBrandHeight:  48px !default;
 
       a {
         color: var(--wp--preset--color--white);
+
+        img {
+          filter: invert(1) grayscale(1) brightness(4);
+        }
       }
     }
   }
