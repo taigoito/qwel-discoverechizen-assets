@@ -6,10 +6,11 @@ $dark:                 var(--wp--preset--color--dark, #333333) !default;
 $mediumDark:           var(--wp--preset--color--medium-dark, #666666) !default;
 $mediumLight:          var(--wp--preset--color--medium-light, #999999) !default;
 $light:                var(--wp--preset--color--light, #cccccc) !default;
-$primary:              var(--wp--preset--color--primary, #3399cc) !default;
-$primaryLight:         var(--wp--preset--color--primary-light, #add6eb) !default;
-$secondary:            var(--wp--preset--color--secondary, #cc334b) !default;
-$secondaryLight:       var(--wp--preset--color--secondary-light, #ebadb7) !default;
+$primaryDark:          var(--wp--preset--color--primary-dark, #18aada) !default;
+$primary:              var(--wp--preset--color--primary, #37bef0) !default;
+$primaryLight:         var(--wp--preset--color--primary-light, #d1f0fc) !default;
+$secondary:            var(--wp--preset--color--secondary, #9bcb6b) !default;
+$tertiary:             var(--wp--preset--color--tertiary, #ff69b4) !default;
 $white:                var(--wp--preset--color--white, #ffffff) !default;
 $linkColor:            $mediumDark !default;
 $linkHoverColor:       $primary !default;
@@ -21,17 +22,17 @@ $whiteningFilter:      invert(1) grayscale(1) brightness(4) !default;
 $breakpoint:           900px !default;
 
 // Drawer Menu
-$drawerAlwaysShown:    false !default;
+$drawerAlwaysShown:    true !default;
 $drawerPad:            0.75rem !default;
-$drawerHeight:         48px !default;
-$drawerMenuDarkBg:     $primary;
+$drawerHeight:         72px !default;
+$drawerMenuDarkBg:     $primaryDark;
 
 // Preloader
 $spinnerWidth:         48px !default;
 $spinnerBarsCount:     12 !default;
 $spinnerBarsBg:        #ffffff !default; // rgba関数を使用するため16進数指定
 $preloaderHeight:      100vh !default;
-$preloaderBg:          $primary !default;
+$preloaderBg:          $primaryDark !default;
 
 // Slider
 $sliderAspectRatio:    5 / 8 !default;

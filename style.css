@@ -30,8 +30,8 @@
   right: 0;
   z-index: 1110;
   display: block;
-  width: calc(1.5rem + 48px);
-  height: calc(1.5rem + 48px);
+  width: calc(1.5rem + 72px);
+  height: calc(1.5rem + 72px);
   padding: 0;
   border: 0;
   background-color: transparent;
@@ -39,17 +39,12 @@
   outline: 0;
   cursor: pointer;
 }
-@media (min-width: 900px) {
-  .drawer {
-    display: none;
-  }
-}
 .drawer__navicon.icon, .drawer__close.icon {
   position: absolute;
   top: 0.75rem;
   right: 0.75rem;
-  width: 48px;
-  height: 48px;
+  width: 72px;
+  height: 72px;
   transition: 0.25s all ease-in-out;
 }
 .drawer__navicon {
@@ -129,7 +124,7 @@
 }
 .drawerMenu__item.--brand img {
   width: auto;
-  height: 48px;
+  height: 72px;
 }
 .drawerMenu__item.--social {
   width: 3rem;
@@ -145,7 +140,7 @@
   text-decoration: none;
 }
 .drawerMenu.--dark {
-  background-color: var(--wp--preset--color--primary, #3399cc);
+  background-color: var(--wp--preset--color--primary-dark, #18aada);
 }
 .drawerMenu.--dark .drawerMenu__item.--social {
   fill: var(--wp--preset--color--white, #ffffff);
@@ -216,7 +211,7 @@
   z-index: 900;
   width: 100%;
   height: 100vh;
-  background: var(--wp--preset--color--primary, #3399cc);
+  background: var(--wp--preset--color--primary-dark, #18aada);
   opacity: 1;
   transition: opacity ease-in-out 0.5s;
 }
@@ -382,11 +377,11 @@
   margin: auto;
   border: 0;
   background-color: transparent;
-  color: var(--wp--preset--color--primary-light, #add6eb);
+  color: var(--wp--preset--color--primary-light, #d1f0fc);
   text-align: center;
 }
 .slider__prev:hover, .slider__next:hover {
-  color: var(--wp--preset--color--primary, #3399cc);
+  color: var(--wp--preset--color--primary, #37bef0);
 }
 .slider__prev {
   left: 0;
@@ -407,9 +402,9 @@
   height: 0.5rem;
   margin: 0.75rem;
   border-radius: 50%;
-  background-color: var(--wp--preset--color--primary, #3399cc);
+  background-color: var(--wp--preset--color--primary, #37bef0);
   cursor: pointer;
 }
 .slider__navItem:not(.--current) {
-  background-color: var(--wp--preset--color--primary-light, #add6eb);
+  background-color: var(--wp--preset--color--primary-light, #d1f0fc);
 }

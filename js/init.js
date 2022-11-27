@@ -7,7 +7,7 @@
 
 // Drawer Menu
 import DrawerMenu from "./_drawerMenu.js";
-new DrawerMenu();
+new DrawerMenu({darkMode: true});
 
 // Scrolling
 import Scrolling from './_scrolling.js';
