@@ -13,6 +13,10 @@ new DrawerMenu();
 import Scrolling from './_scrolling.js';
 new Scrolling();
 
+// Preloader
+import Preloader from "./_preloader.js";
+new Preloader();
+
 // Responsive Color
 import ResponsiveColor from './_responsiveColor.js';
 new ResponsiveColor();
