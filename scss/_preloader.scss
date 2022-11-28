@@ -2,12 +2,6 @@
  * Preloader
  */
 
-$spinnerWidth:     48px;
-$spinnerBarsCount: 12;
-$spinnerBarsBg:    #ffffff; // rgba関数を使用するため16進数指定
-$preloaderHeight:  100vh;
-$preloaderBg:      var(--wp--preset--color--primary-dark);
-
 @mixin make-spinner-bars($width: $spinnerWidth, $spinnerBarsCount: $spinnerBarsCount, $spinnerBarsBg: $spinnerBarsBg) {
   & > span {
     position: absolute;

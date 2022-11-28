@@ -1,0 +1,110 @@
+/**
+ * Slider
+ */
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: calc(83.33vmin * #{$sliderAspectRatio});
+  overflow: hidden;
+
+  @media (min-width: $breakpoint) {
+    @each $key, $height in $sliderHeights {
+      &.--#{$key} {
+        height: $height;
+      }
+    }
+  }
+
+  // .slider直下にギャラリーを設置して使用する
+  .wp-block-gallery {
+    display: flex;
+    flex-wrap: nowrap !important; // reset.wp-block-gallery
+    align-items: center;
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    transform: translateX(0);
+  }
+
+  .wp-block-image {
+    position: relative;
+    flex: 0 1 auto; 
+    order: 0;
+    margin: 0;
+    opacity: 1;
+    transition: opacity 0.15s linear;
+    
+    &:not(.--current) {
+      opacity: .5;
+    }
+  
+    img {
+      margin: 0;
+    }
+  }
+
+  .wp-element-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: .75rem 1.5rem;
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.5));
+    color: $white;
+    font-size: var(--wp--preset--font-size--large) !important;
+    text-align: center;
+
+    a {
+      display: block;
+      color: $white;
+    }
+  }
+
+  &__prev, &__next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: block;
+    height: 4.5rem; // アイコンのサイズ
+    margin: auto;
+    border: 0;
+    background-color: transparent;
+    color: $primaryLight;
+    text-align: center;
+    
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__prev {
+    left: 0;
+  }
+
+  &__next {
+    right: 0;
+  }
+  
+  &__nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    height: 1rem;
+    margin: .75rem auto;
+    padding: 0;
+  }
+
+  &__navItem {
+    width: .5rem;
+    height: .5rem;
+    margin: .75rem;
+    border-radius: 50%;
+    background-color: $primary;
+    cursor: pointer;
+
+    &:not(.--current) {
+      background-color: $primaryLight;
+    }
+  }
+}

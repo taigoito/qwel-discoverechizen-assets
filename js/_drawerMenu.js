@@ -9,7 +9,7 @@ export default class DrawerMenu {
   
   constructor(options = {}) {
     // 設定
-    this.darkMode = options.darkMode || true;
+    this.darkMode = options.darkMode || false;
 
     // クローンする対象
     this._siteBrand = options.siteBrand || 

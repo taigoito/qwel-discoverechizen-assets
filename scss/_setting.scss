@@ -1,0 +1,42 @@
+// Setting
+
+// Colors
+$black:                var(--wp--preset--color--black, #000000) !default;
+$dark:                 var(--wp--preset--color--dark, #333333) !default;
+$mediumDark:           var(--wp--preset--color--medium-dark, #666666) !default;
+$mediumLight:          var(--wp--preset--color--medium-light, #999999) !default;
+$light:                var(--wp--preset--color--light, #cccccc) !default;
+$primary:              var(--wp--preset--color--primary, #3399cc) !default;
+$primaryLight:         var(--wp--preset--color--primary-light, #add6eb) !default;
+$secondary:            var(--wp--preset--color--secondary, #cc334b) !default;
+$secondaryLight:       var(--wp--preset--color--secondary-light, #ebadb7) !default;
+$white:                var(--wp--preset--color--white, #ffffff) !default;
+$linkColor:            $mediumDark !default;
+$linkHoverColor:       $primary !default;
+
+// Filter for images
+$whiteningFilter:      invert(1) grayscale(1) brightness(4) !default;
+
+// Breakpoint
+$breakpoint:           900px !default;
+
+// Drawer Menu
+$drawerAlwaysShown:    false !default;
+$drawerPad:            0.75rem !default;
+$drawerHeight:         48px !default;
+$drawerMenuDarkBg:     $primary;
+
+// Preloader
+$spinnerWidth:         48px !default;
+$spinnerBarsCount:     12 !default;
+$spinnerBarsBg:        #ffffff !default; // rgba関数を使用するため16進数指定
+$preloaderHeight:      100vh !default;
+$preloaderBg:          $primary !default;
+
+// Slider
+$sliderAspectRatio:    5 / 8 !default;
+$sliderHeights:        (
+  sm:                    12rem,
+  md:                    18rem,
+  lg:                    24rem
+) !default;

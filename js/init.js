@@ -21,6 +21,10 @@ new Preloader();
 import ResponsiveColor from './_responsiveColor.js';
 new ResponsiveColor();
 
+// Slider
+import Slider from './_slider.js';
+new Slider();
+
 // Evil Icons
 import EvilIcons from './_evilIcons.js';
 new EvilIcons();
