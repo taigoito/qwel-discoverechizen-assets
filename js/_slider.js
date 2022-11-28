@@ -11,7 +11,8 @@ export default class Slider {
     // Sliderの各要素
     this._elem = elem || document.querySelector('.slider');
     if (!this._elem) return;
-    this._inner = this._elem.querySelector('.wp-block-gallery');
+    this._inner = this._elem.querySelector('.is-style-slider-items');
+    if (!this._inner) return;
     this._items = this._inner.children;
     if (!this._items.length) return;
 
@@ -19,9 +20,12 @@ export default class Slider {
     this._isHeader = this._elem.dataset.isHeader || false; // headerに設置する場合はドラグ、ホイール操作に対応しない
     this._aspectRatio = this._elem.dataset.aspectRatio || 5 / 8;
     this._gap = 0; // アイテム間隔(px)
-    this._inner.style.gap = `${this._gap}px`;
     this._interval = this._elem.dataset.interval || 3000; // 1000未満を指定すると自動再生しない
     this._duration = this._elem.dataset.duration || 500;
+
+    // innerにスタイル適用
+    this._inner.style.flexWrap = 'nowrap'; // .wp-block-galleryのリセット
+    this._inner.style.gap = `${this._gap}px`;
 
     // 各状態管理
     this._currentIndex = 0;

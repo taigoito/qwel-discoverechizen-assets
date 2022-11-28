@@ -15,17 +15,16 @@
       }
     }
   }
+}
 
-  // .slider直下にギャラリーを設置して使用する
-  .wp-block-gallery {
-    display: flex;
-    flex-wrap: nowrap !important; // reset.wp-block-gallery
-    align-items: center;
-    height: 100%;
-    margin-top: 0;
-    margin-bottom: 0;
-    transform: translateX(0);
-  }
+  // .slider直下にギャラリー(style:Slider Items)を設置して使用する
+.is-style-slider-items {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  transform: translateX(0);
 
   .wp-block-image {
     position: relative;
@@ -60,7 +59,9 @@
       color: $white;
     }
   }
+}
 
+.slider {
   &__prev, &__next {
     position: absolute;
     top: 0;

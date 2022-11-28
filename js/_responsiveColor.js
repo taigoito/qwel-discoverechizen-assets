@@ -27,11 +27,9 @@
   // セクションの背景を検出し .--change を付与
   _change() {
     const section = this._getSection();
-    const inner = section.children[0]; // 予め背景色をxxxx__inner要素に設定しておく必要あり
     let colorYiq = true;
-    if (inner) {
-      colorYiq = this._detectColorYiq(inner);
-    }
+    // 予め要素自身かその子要素に、背景色を設定しておく必要あり
+    colorYiq = this._detectColorYiq(section);
 
     this._elems.forEach((elem) => {
       if (colorYiq) {
@@ -46,7 +44,11 @@
 
   // 要素の背景色を検出し、濃いか薄いか判定
   _detectColorYiq(elem) {
-    const color =  window.getComputedStyle(elem).backgroundColor;
+    let color =  window.getComputedStyle(elem).backgroundColor;
+    if (color === 'rgba(0, 0, 0, 0)') {
+      const inner = elem.children[0];
+      color = window.getComputedStyle(inner).backgroundColor;
+    }
     const colors = color.match(/\d+/g);
     const r = parseInt(colors[0], 16);
     const g = parseInt(colors[1], 16);
@@ -62,10 +64,16 @@
     const main = document.querySelector('main');
 
     const header = document.querySelector('header');
-    sections.push(header);
+    // headerが固定されている場合は除く
+    const headerStyle = window.getComputedStyle(header);
+    const headerPosition = headerStyle.getPropertyValue('position');
+    if (headerPosition !== 'fixed') {
+      sections.push(header);
+    }
 
     for (const section of main.children) {
-      if (section.tagName === 'SECTION' || section.tagName === 'ARTICLE') {
+      if (section.tagName === 'SECTION' || section.tagName === 'ARTICLE'
+        || section.tagName === 'HEADER' || section.tagName === 'FOOTER') {
         sections.push(section);
       }
     }

@@ -6,5 +6,19 @@
  */
 
 (() => {
-  console.log('Hello block styles!');
+
+  // Slider
+  // wp:group.slider で囲んで使用する
+  wp.blocks.registerBlockStyle('core/gallery', {
+    name: 'slider-items',
+    label: 'Slider Items'
+  });
+
+  // Modal
+  // wp:group.modalItems で囲んで使用する
+  wp.blocks.registerBlockStyle('core/gallery', {
+    name: 'modal-items',
+    label: 'Modal Items'
+  });
+
 })();
