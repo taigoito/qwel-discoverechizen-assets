@@ -14,7 +14,30 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 defined( 'ABSPATH' ) || exit;
 
 
+/*
+ * プラグインのパス, URI
+ */
+define( 'QWEL_ASSETS_DIR', WP_PLUGIN_DIR . '/qwel-assets/' );
+define( 'QWEL_ASSETS_URI', WP_PLUGIN_URL . '/qwel-assets/' );
+
+
+/*
+ * classのオートロード
+ */
+spl_autoload_register(
+	function( $classname ) {
+		if ( strpos( $classname, 'Qwel_Assets' ) === false ) return;
+		$classname = str_replace( '\\', '/', $classname );
+		$classname = str_replace( 'Qwel_Assets/', '', $classname );
+		$file      = QWEL_ASSETS_DIR . '/classes/' . $classname . '.php';
+		if ( file_exists( $file ) ) {
+			require $file;
+		}
+	}
+);
+
 class Qwel_Assets {
+  use \Qwel_Assets\Shortcodes;
 		
 	public function __construct() {
     // ブロックスタイルを追加 (エディター)
@@ -25,6 +48,9 @@ class Qwel_Assets {
 
 		// CSS, JSファイルを読み込み (フロント)
 		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
+    
+    // ショートコード登録
+    add_action( 'init', [ $this, 'register_shortcode' ] );
 
 	}
 
